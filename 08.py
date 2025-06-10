@@ -1,10 +1,6 @@
-scores = list()
-n = int(input("n="))
-while n>=0:
-    scores.append(n)
-    n = int(input("n="))
-print(sorted(scores))
-print("最高分是", max(scores))
-print("最低分是", min(scores))
-print("總分是", sum(scores))
-print("平均是", sum(scores)/len(scores))
+def fab(n):
+    if n == 0: return 0
+    if n == 1: return 1
+    return fab(n-1) + fab(n-2)
+for i in range(20):
+    print(fab(i), " ", end="")
